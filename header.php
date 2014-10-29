@@ -20,6 +20,7 @@ echo '<!-- start header -->
 				<li class="'; if($first_part=="portfolio.php"){echo "active"; }else {echo "noactive";} echo'"><a href="portfolio.php">portfolio</a></li>
 				<li class="'; if($first_part=="blog.php"){echo "active"; }else {echo "noactive";} echo'"><a href="blog.php">blog</a></li>
 				<li class="'; if($first_part=="contact.php"){echo "active"; }else {echo "noactive";} echo'"><a href="contact.php">contact</a></li>
+				<li class="'; if($first_part=="mapa.php"){echo "active"; }else {echo "noactive";} echo'"><a href="mapa.php">Mapa</a></li>
 			</ul>
 			<div id="sb-search" class="sb-search">
 				<form>
@@ -40,7 +41,9 @@ echo '<!-- start header -->
 	                <li class="nav-item"><a href="about.php">About</a></li>
 	                <li class="nav-item"><a href="portfolio.php">Portfolio</a></li>
 	                <li class="nav-item"><a href="blog.php">Blog</a></li>
-	                <li class="nav-item"><a href="contact.php">Contact</a></li>
+	                <li class="nav-item"><a href="contact.php">Contacto</a></li>
+	                <li class="nav-item"><a href="mapa.php">Mapa</a></li>					
+
 	                <div class="clear"></div>
 	            </ul>
 	        </nav>
