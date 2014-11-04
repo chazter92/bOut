@@ -16,7 +16,7 @@ echo '<!-- start header -->
 		<div class="h_right">
 			<ul class="menu">
 				<li class="'; if($first_part=="index.php" || $first_part==""){echo "active"; }else {echo "noactive";} echo'"><a href="index.php">home</a></li>
-				<li class="'; if($first_part=="about.php"){echo "active"; }else {echo "noactive";} echo'"><a href="categoria.php">about</a></li>
+				<li class="'; if($first_part=="categoria.php"){echo "active"; }else {echo "noactive";} echo'"><a href="categoria.php">Categorias</a></li>
 				<li class="'; if($first_part=="portfolio.php"){echo "active"; }else {echo "noactive";} echo'"><a href="portfolio.php">portfolio</a></li>
 				<li class="'; if($first_part=="blog.php"){echo "active"; }else {echo "noactive";} echo'"><a href="blog.php">blog</a></li>
 				<li class="'; if($first_part=="contact.php"){echo "active"; }else {echo "noactive";} echo'"><a href="contact.php">contact</a></li>

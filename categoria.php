@@ -13,8 +13,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	require_once 'conexion.php';
 	 
 	$conexion = conectar();
-	$id_categoria = trim($_POST['id']);
-	$categorias=mysql_query("select * from categoria where id_categoria = ".$id_categoria,$conexion) or
+	$id_categoria = trim($_GET['id']);
+	if($_GET['id']){
+	$categorias=mysql_query("select * from CATEGORIA where id_categoria = ".$id_categoria,$conexion) or
 	  die("Problemas en el select:".mysql_error());
 	  
 	  if($categoria=mysql_fetch_array($categorias)){
@@ -22,6 +23,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	  }else{
 		  header('Location: index.php');
 	  }
+	}else{
+		  header('Location: index.php');
+	}
 ?>;
 
 <title>B-Out! | <?php echo $titulo;?></title>
@@ -53,20 +57,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<!-- start about -->
 			<div class="about">
 					 <div class="cont-grid-img img_style">
-			     		<img src= <?php echo "\"" . strtolower($titulo) . "/" . $categoria['imagen'] . "\"";?> alt="">
+			     		<img src= <?php echo "\"images/" . strtolower($titulo) . "/" . $categoria['imagen'] . "\"";?> alt="">
 			     	</div>
 			       <div class="cont-grid">
-					       	<h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-					       	<p class="para">Lorem Ipsum is simply dummy text of the printing and typesetting industry., Lorem Ipsum  dummy text ever since dummy text of the printing and usings 1500s,Duis aute irure dolor in reprehenderit in voluptate velit esse when an,Lorem Ipsum has been the industry's standard dummy text ever since dummy text of the printing and usings 1500s, </p>
-					       	<p class="para">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
-			      	</div>
+					       	<p class="para">
+                            <?php echo $categoria['descripcion'];?>
+                            </p>
+			  </div>
 			      	<div class="clear"></div>
 			    	<div class="about-p">
-				    	<p class="para">Lorem Ipsum is simply dummy text of the printing and typesetting industry., Lorem Ipsum  dummy text ever since dummy text of the printing and usings 1500s,Duis aute irure dolor in reprehenderit in voluptate velit esse when an,Lorem Ipsum has been the industry's standard dummy text ever since dummy text of the printing and usings 1500s, </p>
-						<p class="para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since dummy text of the printing and usings 1500s,Duis aute irure dolor in reprehenderit in voluptate velit Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since dummy text of the printing and usings 1500s,Duis aute irure dolor in reprehenderit in voluptate velit</p>
-						<p class="para">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+				    	
 						<div class="read_more">
-							<a class="btn" href="details.html">read more</a>
+							<a class="btn" href="top.php">Ver sitios</a>
 						</div>
 					</div>
 			</div>
