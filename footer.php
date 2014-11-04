@@ -59,7 +59,7 @@ echo '<div class="footer_bg">
 			<div class="f_nav1">
 				<ul>
 					<li><a href="index.php">home</a></li>
-					<li><a href="about.php">about</a></li>
+					<li><a href="categoria.php">Categorias</a></li>
 					<li><a href="portfolio.php">portfolio</a></li>
 					<li><a href="blog.php">blog</a></li>
 					<li><a href="index.php">features</a></li>

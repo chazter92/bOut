@@ -106,7 +106,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="wrap">
 	<div class="main">
 		<!-- start popup -->
-		<div id="small-dialog" class="mfp-hide">
+		<div id="small-dialog2" class="mfp-hide">
 			<div class="pop_up">
 			 	<h2>Lorem Ipsum is simply dummy text of the printing and industry</h2>
 			 	<img src="images/zoom.jpg" title="image-name">
@@ -116,10 +116,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 		
         
-        <div id="small-dialog-res" class="mfp-hide">
+        <div id="small-dialog-res2" class="mfp-hide">
 			<div class="pop_up">
-			 	<h2>RESTAURANTES</h2>
-			 	<img src="images/zoom.jpg" title="image-name">
+			 	<h2 id="titulo_pop_up">RESTAURANTES</h2>
+			 	<img id="img_pop_up" src="images/zoom.jpg" title="image-name">
 				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic</p>
 				<a class="btn" href="details.php">Read more</a>
 			</div>
@@ -137,7 +137,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <li><span class="filter" data-filter="bar pub lounge discoteca casino varios">+18</span></li>
 					</ul>
 		<div id="portfoliolist">
-			<a class="popup-with-zoom-anim" href="#small-dialog-res">
+			<a class="popup-with-zoom-anim" href="categoria.php?id=1">
 				<div class="portfolio restaurante" data-cat="restaurante">
 					<div class="portfolio-wrapper">				
 							<img src="images/pic1.jpg"  alt="Image 2" />
@@ -151,7 +151,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 				</div>		
 			</a>
-            <a class="popup-with-zoom-anim" href="#small-dialog">
+            <a class="popup-with-zoom-anim" href="categoria.php?id=8">
 				<div class="portfolio casino" data-cat="casino">
 					<div class="portfolio-wrapper">			
 							<img src="images/pic7.jpg"  alt="Image 2" />
@@ -165,7 +165,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 				</div>	
 			</a>
-			<a class="popup-with-zoom-anim" href="#small-dialog">
+			<a class="popup-with-zoom-anim" href="categoria.php?id=2">
 				<div class="portfolio discoteca" data-cat="discoteca">
 					<div class="portfolio-wrapper">			
 							<img src="images/pic2.jpg"  alt="Image 2" />
@@ -179,7 +179,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 				</div>		
 			</a>
-			<a class="popup-with-zoom-anim" href="#small-dialog">
+			<a class="popup-with-zoom-anim" href="categoria.php?id=3">
 				<div class="portfolio bar" data-cat="bar">
 					<div class="portfolio-wrapper">						
 							<img src="images/pic3.jpg"  alt="Image 2" />
@@ -193,7 +193,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 				</div>				
 			</a>
-            <a class="popup-with-zoom-anim" href="#small-dialog">
+            <a class="popup-with-zoom-anim" href="categoria.php?id=6">
 				<div class="portfolio cine" data-cat="cine">
 					<div class="portfolio-wrapper">			
 							<img src="images/pic7.jpg"  alt="Image 2" />
@@ -207,7 +207,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 				</div>	
 			</a>
-			<a class="popup-with-zoom-anim" href="#small-dialog">
+			<a class="popup-with-zoom-anim" href="categoria.php?id=5">
 				<div class="portfolio pub" data-cat="pub">
 					<div class="portfolio-wrapper">			
 							<img src="images/pic4.jpg"  alt="Image 2" />
@@ -221,7 +221,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 				</div>	
 			</a>
-			<a class="popup-with-zoom-anim" href="#small-dialog">	
+			<a class="popup-with-zoom-anim" href="categoria.php?id=7">	
 				<div class="portfolio sportbar" data-cat="sportbar">
 					<div class="portfolio-wrapper">
 							<img src="images/pic5.jpg"  alt="Image 2" />
@@ -235,7 +235,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 				</div>			
 			</a>
-			<a class="popup-with-zoom-anim" href="#small-dialog">
+			<a class="popup-with-zoom-anim" href="categoria.php?id=4">
 				<div class="portfolio lounge" data-cat="lounge">
 					<div class="portfolio-wrapper">			
 							<img src="images/pic6.jpg"  alt="Image 2" />
@@ -249,7 +249,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 				</div>	
 			</a>
-			<a class="popup-with-zoom-anim" href="#small-dialog">
+			<a class="popup-with-zoom-anim" href="categoria.php?id=9">
 				<div class="portfolio teatro" data-cat="teatro">
 					<div class="portfolio-wrapper">			
 							<img src="images/pic7.jpg"  alt="Image 2" />
@@ -263,7 +263,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 				</div>	
 			</a>
-			<a class="popup-with-zoom-anim" href="#small-dialog">
+			<a class="popup-with-zoom-anim" href="categoria.php?id=10">
 				<div class="portfolio varios" data-cat="varios">
 					<div class="portfolio-wrapper">			
 							<img src="images/pic7.jpg"  alt="Image 2" />

@@ -7,7 +7,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>B-Out! | About</title>
+
+<?php 	
+	require_once 'config.php';
+	require_once 'conexion.php';
+	 
+	$conexion = conectar();
+	$id_categoria = trim($_POST['id']);
+	$categorias=mysql_query("select * from categoria where id_categoria = ".$id_categoria,$conexion) or
+	  die("Problemas en el select:".mysql_error());
+	  
+	  if($categoria=mysql_fetch_array($categorias)){
+		  $titulo = $categoria['nombre'];		  
+	  }else{
+		  header('Location: index.php');
+	  }
+?>;
+
+<title>B-Out! | <?php echo $titulo;?></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
@@ -23,8 +40,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="slider_bg">
 <div class="wrap">
 	<div class="slider">
-		<h2>about us</h2>
-		<h3>What we Think, get in touch</h3>
+		<h2><?php echo $titulo;?></h2>
+		<h3>Los mejores sitios los encuentras aquí</h3>
 	</div>
 </div>
 </div>
@@ -36,7 +53,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<!-- start about -->
 			<div class="about">
 					 <div class="cont-grid-img img_style">
-			     		<img src="images/about_pic.jpg" alt="">
+			     		<img src= <?php echo "\"" . strtolower($titulo) . "/" . $categoria['imagen'] . "\"";?> alt="">
 			     	</div>
 			       <div class="cont-grid">
 					       	<h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
