@@ -85,7 +85,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="header_btm">
 		<div class="h_left">
 			<h2></h2>
-			<h3>En entretenimiento tu mejor opción.</h3>
+			<h3>Mientras exista diversion, lo seguiremos haciendo!</h3>
 		</div>
 		<div class="soc_icons">
 			<h2>Comparte</h2>
@@ -105,26 +105,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="main_bg">
 <div class="wrap">
 	<div class="main">
-		<!-- start popup -->
-		<div id="small-dialog2" class="mfp-hide">
-			<div class="pop_up">
-			 	<h2>Lorem Ipsum is simply dummy text of the printing and industry</h2>
-			 	<img src="images/zoom.jpg" title="image-name">
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic</p>
-				<a class="btn" href="details.php">Read more</a>
-			</div>
-		</div>
-		
-        
-        <div id="small-dialog-res2" class="mfp-hide">
-			<div class="pop_up">
-			 	<h2 id="titulo_pop_up">RESTAURANTES</h2>
-			 	<img id="img_pop_up" src="images/zoom.jpg" title="image-name">
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic</p>
-				<a class="btn" href="details.php">Read more</a>
-			</div>
-		</div>
-		<!-- end popup -->
 		<!-- start gallery  -->
 			<div class="container">
 					<ul id="filters" class="clearfix">
@@ -140,7 +120,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<a class="popup-with-zoom-anim" href="categoria.php?id=1">
 				<div class="portfolio restaurante" data-cat="restaurante">
 					<div class="portfolio-wrapper">				
-							<img src="images/pic1.jpg"  alt="Image 2" />
+							<img src="images/restaurantes/restaurantes3.jpg"  alt="Restaurantes" width = "270px" height="180px"/>
 						<div class="label">
 							<div class="label-text">
 								<p class="text-title">Buena comida</p>
@@ -154,7 +134,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <a class="popup-with-zoom-anim" href="categoria.php?id=8">
 				<div class="portfolio casino" data-cat="casino">
 					<div class="portfolio-wrapper">			
-							<img src="images/pic7.jpg"  alt="Image 2" />
+							<img src="images/casinos/casinos3.jpg"  alt="Casinos" width = "270px" height="180px"/>
 						<div class="label">
 							<div class="label-text">
 								<p class="text-title">Prueba tu suerte</p>
@@ -168,7 +148,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<a class="popup-with-zoom-anim" href="categoria.php?id=2">
 				<div class="portfolio discoteca" data-cat="discoteca">
 					<div class="portfolio-wrapper">			
-							<img src="images/pic2.jpg"  alt="Image 2" />
+							<img src="images/discotecas/discotecas3.jpg"  alt="Discotecas" width = "270px" height="180px"/>
 						<div class="label">
 							<div class="label-text">
 								<p class="text-title">Para mover el cuerpo</p>
@@ -182,7 +162,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<a class="popup-with-zoom-anim" href="categoria.php?id=3">
 				<div class="portfolio bar" data-cat="bar">
 					<div class="portfolio-wrapper">						
-							<img src="images/pic3.jpg"  alt="Image 2" />
+							<img src="images/bares/bares3.jpg"  alt="Bares" width = "270px" height="180px"/>
 						<div class="label">
 							<div class="label-text">
 								<p class="text-title">El último trago</p>
@@ -196,7 +176,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <a class="popup-with-zoom-anim" href="categoria.php?id=6">
 				<div class="portfolio cine" data-cat="cine">
 					<div class="portfolio-wrapper">			
-							<img src="images/pic7.jpg"  alt="Image 2" />
+							<img src="images/cines/cines3.jpg"  alt="Cines" width = "270px" height="180px"/>
 						<div class="label">
 							<div class="label-text">
 								<p class="text-title">Una buena pelicula</p>
@@ -210,7 +190,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<a class="popup-with-zoom-anim" href="categoria.php?id=5">
 				<div class="portfolio pub" data-cat="pub">
 					<div class="portfolio-wrapper">			
-							<img src="images/pic4.jpg"  alt="Image 2" />
+							<img src="images/pubs/pubs3.jpg"  alt="Pubs" width = "270px" height="180px"/>
 						<div class="label">
 							<div class="label-text">
 								<p class="text-title">La noche es joven</p>
@@ -224,7 +204,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<a class="popup-with-zoom-anim" href="categoria.php?id=7">	
 				<div class="portfolio sportbar" data-cat="sportbar">
 					<div class="portfolio-wrapper">
-							<img src="images/pic5.jpg"  alt="Image 2" />
+							<img src="images/sportbars/sportbars3.jpg"  alt="Sportbars" width = "270px" height="180px"/>
 						<div class="label">
 							<div class="label-text">
 								<p class="text-title">Vive tu pasión</p>
@@ -238,7 +218,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<a class="popup-with-zoom-anim" href="categoria.php?id=4">
 				<div class="portfolio lounge" data-cat="lounge">
 					<div class="portfolio-wrapper">			
-							<img src="images/pic6.jpg"  alt="Image 2" />
+							<img src="images/lounges/lounges3.jpg"  alt="Lounges" width = "270px" height="180px"/>
 						<div class="label">
 							<div class="label-text">
 								<p class="text-title">Entre amigos</p>
@@ -252,7 +232,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<a class="popup-with-zoom-anim" href="categoria.php?id=9">
 				<div class="portfolio teatro" data-cat="teatro">
 					<div class="portfolio-wrapper">			
-							<img src="images/pic7.jpg"  alt="Image 2" />
+							<img src="images/teatros/teatros3.jpg"  alt="Teatros" width = "270px" height="180px"/>
 						<div class="label">
 							<div class="label-text">
 								<p class="text-title">amantes del arte</p>
@@ -266,7 +246,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<a class="popup-with-zoom-anim" href="categoria.php?id=10">
 				<div class="portfolio varios" data-cat="varios">
 					<div class="portfolio-wrapper">			
-							<img src="images/pic7.jpg"  alt="Image 2" />
+							<img src="images/varios/varios3.jpg"  alt="Varios" width = "270px" height="180px"/>
 						<div class="label">
 							<div class="label-text">
 								<p class="text-title">De todo un poco</p>

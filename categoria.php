@@ -21,10 +21,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	  if($categoria=mysql_fetch_array($categorias)){
 		  $titulo = $categoria['nombre'];		  
 	  }else{
-		  header('Location: index.php');
+		 header('Location: categoria.php');
 	  }
 	}else{
-		  header('Location: index.php');
+		  $titulo = "Categorias";
 	}
 ?>;
 
@@ -54,25 +54,66 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="wrap">
 	<div class="main">
 		<div class="content">
-			<!-- start about -->
-			<div class="about">
-					 <div class="cont-grid-img img_style">
-			     		<img src= <?php echo "\"images/" . strtolower($titulo) . "/" . $categoria['imagen'] . "\"";?> alt="">
-			     	</div>
-			       <div class="cont-grid">
-					       	<p class="para">
-                            <?php echo $categoria['descripcion'];?>
-                            </p>
-			  </div>
-			      	<div class="clear"></div>
-			    	<div class="about-p">
-				    	
-						<div class="read_more">
-							<a class="btn" href="top.php">Ver sitios</a>
-						</div>
-					</div>
-			</div>
-			<!-- end about -->
+			<?php 
+					if(!$_GET['id']){
+						echo '<ul class="folio_list">';
+						$categorias=mysql_query("select * from CATEGORIA",$conexion) or
+	  die("Problemas en el select:".mysql_error());
+	  
+	  					while ($categoria = mysql_fetch_array($categorias)) {
+                        
+							$cuerpo_desformateada = $categoria['descripcion'];
+							$arrayTexto = split(' ',$cuerpo_desformateada);
+							$texto = '';
+							$contador = 0;
+							
+							// Reconstruimos la cadena
+							while(60 >= strlen($texto) + strlen($arrayTexto[$contador])){
+								$texto .= ' '.$arrayTexto[$contador];
+								$contador++;
+							}
+							$p_desc = $texto;
+							if(strlen($cuerpo_desformateada)>150){
+								$p_desc .='...<br>';
+							}
+							
+							echo '<li>
+									  <a href="categoria.php?id='.$categoria['id_categoria'].'">
+									  	<img src="images/' . strtolower($categoria['nombre']) . "/" . strtolower($categoria['nombre']) . '2.jpg" alt="" width="300px" height="180px">
+									  </a>
+									  <h3>'.$categoria['nombre'].'</h3>
+									  <p class="para">'.$p_desc.'</p>
+									  <h4><a href="categoria.php?id='.$categoria['id_categoria'].'">Ver más</a></h4>
+								  </li>';
+						 }
+						 echo'		<div class="clear"></div>
+							  </ul>';
+					}else{
+				
+				
+                     echo '
+                        <div class="about">
+                             <div class="cont-grid-img img_style">
+                                <img src="images/' . strtolower($titulo) . "/" . strtolower($titulo) . '1.jpg" alt="" width="600px" height="290px">
+                            </div>
+                           <div class="cont-grid">
+                                    <p class="para">
+                                    '.$categoria['descripcion'].'
+                                    </p>
+                      </div>
+                            <div class="clear"></div>
+                            <div class="about-p">
+                                
+                                <div class="read_more">
+                                    <a class="btn" href="top.php">Ver sitios</a>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- end about -->
+                        
+                	';	
+					}
+				?>
 		</div>
 	</div>
 </div>

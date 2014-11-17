@@ -3,7 +3,7 @@
 $directoryURI = $_SERVER['REQUEST_URI'];
 $path = parse_url($directoryURI, PHP_URL_PATH);
 $components = explode('/', $path);
-$first_part = $components[2];
+$first_part = $components[1];
 
 
 echo '<!-- start header -->
@@ -17,10 +17,10 @@ echo '<!-- start header -->
 			<ul class="menu">
 				<li class="'; if($first_part=="index.php" || $first_part==""){echo "active"; }else {echo "noactive";} echo'"><a href="index.php">home</a></li>
 				<li class="'; if($first_part=="categoria.php"){echo "active"; }else {echo "noactive";} echo'"><a href="categoria.php">Categorias</a></li>
-				<li class="'; if($first_part=="portfolio.php"){echo "active"; }else {echo "noactive";} echo'"><a href="portfolio.php">portfolio</a></li>
-				<li class="'; if($first_part=="blog.php"){echo "active"; }else {echo "noactive";} echo'"><a href="blog.php">blog</a></li>
-				<li class="'; if($first_part=="contact.php"){echo "active"; }else {echo "noactive";} echo'"><a href="contact.php">contact</a></li>
+				<li class="'; if($first_part=="top.php"){echo "active"; }else {echo "noactive";} echo'"><a href="top.php">TOP 5</a></li>
 				<li class="'; if($first_part=="mapa.php"){echo "active"; }else {echo "noactive";} echo'"><a href="mapa.php">Mapa</a></li>
+				<li class="'; if($first_part=="contact.php"){echo "active"; }else {echo "noactive";} echo'"><a href="contact.php">Contacto</a></li>
+				
 			</ul>
 			<div id="sb-search" class="sb-search">
 				<form>
