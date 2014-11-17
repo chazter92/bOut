@@ -141,11 +141,11 @@ google.maps.event.addDomListener(window, 'load', initialize);
 							
 							$titulo = $lugar['nombre'];
 							$cuerpo = $lugar['descripcion'];
-							$imagen = "images/".strtolower($lugar['categoria'])."/".strtolower($lugar['categoria']).mt_rand (1,5).".jpg";
+							$imagen = strtolower($lugar['nombre'])."/".strtolower($lugar['nombre']).mt_rand (1,5).".jpg";
 						}else{
 							$titulo = "Los mejores sitios de la ciudad";
 							$cuerpo = "En B-Out nos esforzamos día a día para proponerte una nueva alternativa de diversión. No ahorramos esfuerzos para llevarte a los mejores sitios de la ciudad, con el mejor ambiente, la mejor compañía, el mejor servicio y los mejores precios. En B-Out mientras exista diversión ¡Lo seguiremos haciendo!";	
-							$imagen = "images/logo.png";
+							$imagen = "logo.png";
 						}
 					  
 					  
@@ -159,7 +159,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 								 echo '<a onClick="ventanaNuevaCalificar('.$id_lugar.')" class="btn">Calificar y comentar</a>';	
 							  }
 						?>
-                        <img src="images/<?php echo $imagen;?>" width="600px" height="290px">
+                        <img src="images/<?php echo strtolower($imagen);?>" width="600px" height="290px">
                         
                         </div>
                      

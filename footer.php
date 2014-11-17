@@ -32,11 +32,16 @@ echo '<div class="footer_bg">
 				<p>201114494</p>
 			</div>
 			<div class="span1_of_4">
-				<h4>Últimos comentarios</h4>
-				<span class="bg">It is a long established fact that a reader will looking layout.</span>
-				<span class="bg top">There are many variations of passages of Lorem Ipsum available words.</span>
-				<span class="bg">It is a long established fact that a reader will looking layout.</span>
-			</div>
+				<h4>Últimos comentarios</h4>';
+				 
+				$comentarios=mysql_query("select C.*, L.nombre lugar from COMENTARIO C inner join LUGAR L ON(C.LUGAR_id_lugar = L.id_lugar) ORDER BY id_comentario DESC LIMIT 3",$conexion) or die("Problemas en el select:".mysql_error());
+	  
+	  					while ($comentario = mysql_fetch_array($comentarios)) {
+							
+							echo '<span class="bg"><strong>'.$comentario['usuario'].'</strong> comentó sobre <a href="mapa.php?id='.$comentario['LUGAR_id_lugar'].'">'.$comentario['lugar'].'</a>: '.$comentario['texto'].'</span>';
+						}
+				
+			echo '</div>
 			<div class="span1_of_4">
 				<h4>Photostream</h4>
 				<ul class="f_nav">
@@ -63,6 +68,7 @@ echo '<div class="footer_bg">
 					<li><a href="categoria.php">Categorias</a></li>
 					<li><a href="top.php">TOP 5</a></li>
 					<li><a href="mapa.php">Mapa</a></li>
+					<li><a href="ofertas.php">Ofertas</a></li>
 					<li><a href="contact.php">Contacto</a></li>
 				</ul>
 			</div>

@@ -82,10 +82,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 <body>
 	<?php include_once('header.php');?>
+    
 	<div class="header_btm">
 		<div class="h_left">
-			<h2></h2>
-			<h3>Mientras exista diversion, lo seguiremos haciendo!</h3>
+			<h2>Mientras exista diversion, lo seguiremos haciendo!</h2>
+			<h3></h3>
 		</div>
 		<div class="soc_icons">
 			<h2>Comparte</h2>
@@ -262,6 +263,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 </div>
 </div>
-	<?php include_once('footer.php');?>
+	
+	<?php require_once 'config.php';
+	require_once 'conexion.php';
+	$conexion = conectar();
+	include_once('footer.php');?>
 </body>
 </html>

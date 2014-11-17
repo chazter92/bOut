@@ -19,6 +19,7 @@ echo '<!-- start header -->
 				<li class="'; if($first_part=="categoria.php"){echo "active"; }else {echo "noactive";} echo'"><a href="categoria.php">Categorias</a></li>
 				<li class="'; if($first_part=="top.php"){echo "active"; }else {echo "noactive";} echo'"><a href="top.php">TOP 5</a></li>
 				<li class="'; if($first_part=="mapa.php"){echo "active"; }else {echo "noactive";} echo'"><a href="mapa.php">Mapa</a></li>
+				<li class="'; if($first_part=="ofertas.php"){echo "active"; }else {echo "noactive";} echo'"><a href="ofertas.php">Ofertas</a></li>
 				<li class="'; if($first_part=="contact.php"){echo "active"; }else {echo "noactive";} echo'"><a href="contact.php">Contacto</a></li>
 				
 			</ul>
