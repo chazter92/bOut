@@ -20,7 +20,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!-- Comienza plugin para la lista de categorias -->
         <link rel="stylesheet" type="text/css" href="css/style1.css" />
         <link rel="stylesheet" type="text/css" href="css/boxes.css" />
-        <link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="shortcut icon" href="../favicon.ico"> 
         <script src="js/modernizr.custom.63321.js"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script type="text/javascript" src="js/jquery.dropdown.js"></script>
@@ -119,6 +119,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <table style="margin: 0 auto; width:100%;">
                 <tr>
                     <th>
+					
                         <?php
                         require_once 'config.php';
                         require_once 'conexion.php';
@@ -134,36 +135,35 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             echo "<option value='" . $row[0] . "' class='icon-cloudy'>" . $row[1] . "</option>";
                         }
                         echo "</select>";
-                        echo "</form>";
+                        echo "</th>";
+						echo "</tr>";
+						echo "<tr>";
+						echo "<th>";
+						echo "<br><br>";
+						echo "<input type=submit class=btn value='Ver Top' name=top />";
+						echo "</form>";
+						echo "";
+						echo "";
                         ?> 
-
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        <br>
-                        <br>
-                <form action="" method="get">
-                    <input type="submit" class="btn1" value="Ver Top" name="top" />
-                </form>
+						
                 </th>
                 <tr>
                     <th>
                         <br>
                         <br>
                         <br>
-
-                        <?php
-                        if (isset($_GET['top'])) {
+						<?php
+                        if (isset($_POST['cd-dropdown'])) {
                             // Hacemos el select de la info //
                             require_once 'config.php';
                             require_once 'conexion.php';
                             $conexion = conectar();
                             $categoria = $_POST['cd-dropdown'];
-                            $consulta = "SELECT DISTINCT L.nombre as Lugar, K.nombre as Categoria, "
-                                    . "(SELECT AVG(punteo) FROM Calificacion WHERE Calificacion.LUGAR_id_lugar=L.id_lugar) as Promedio "
-                                    . "FROM lugar L JOIN Categoria K ON (L.id_categoria = K.id_categoria) JOIN Calificacion C "
-                                    . "ON (L.id_lugar = C.LUGAR_id_lugar) WHERE K.id_categoria = " . $categoria;
+							$consulta = "SELECT L.nombre as Lugar, K.nombre as Categoria, "
+                                    . "(SELECT AVG(punteo) FROM `CALIFICACION` WHERE C.LUGAR_id_lugar=L.id_lugar) as Promedio "
+                                    . "FROM `LUGAR` L JOIN `CATEGORIA` K ON (L.CATEGORIA_id_categoria = K.id_categoria) JOIN `CALIFICACION` C "
+                                    . "ON (L.id_lugar = C.LUGAR_id_lugar) WHERE K.id_categoria = " . $categoria
+									. " ORDER BY Promedio DESC";
 
                             $categorias = mysql_query($consulta) or
                                     die("Problemas en el select:" . mysql_error());
@@ -190,10 +190,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 }
                                 $contador = $contador + 1;
                             }
-                            unset($_POST['top']);
-                        }
-                        ?>			
-
+							if($contador == 1)
+							{
+								echo "<a style=width:100% class=box-grey>NO HAY CALIFICACIONES EN ESTA CATEGORIA</a>";
+							}
+							
+                            unset($_POST['cd-dropdown']);
+                        }?>			
+						
                     </th>
                 </tr>
                 </tr>

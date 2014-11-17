@@ -353,6 +353,7 @@ body {
 .btn:hover{
 	background: #34495E;	
 }
+
 .btn1{
 	display: inline-block;
 	padding: 12px 30px;
@@ -372,6 +373,7 @@ body {
 .btn1:hover{
 	background: #FA1B31;	
 }
+
 /*---start-gallery -----*/
 .container { 
 	position: relative; 
