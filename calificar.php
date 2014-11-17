@@ -22,7 +22,7 @@
         $cod = $_GET['id'];
         //$cod = 2;
 
-        $query = mysql_query("Select nombre, METRICA_id_metrica from 'CAT_MET', 'METRICA' where METRICA_id_metrica = id_metrica and CATEGORIA_id_categoria = ( select CATEGORIA_id_categoria from 'LUGAR' where id_lugar ='$cod' );", $conexion) or die('Select fallido: ' . mysql_error());
+        $query = mysql_query("Select nombre, METRICA_id_metrica from CAT_MET, METRICA where METRICA_id_metrica = id_metrica and CATEGORIA_id_categoria = ( select CATEGORIA_id_categoria from LUGAR where id_lugar ='$cod' );", $conexion) or die('Select fallido: ' . mysql_error());
         
         //insertar comentario
         if (isset($_POST['comentario'])) {
@@ -31,7 +31,7 @@
             $usuario = trim($_POST['nombre']);
             $fecha = strftime( "%Y-%m-%d-%H-%M-%S", time() );
             
-            mysql_query("INSERT INTO 'COMENTARIO' values(null, '$usuario', '$comment','$fecha',$cod);", $conexion) or die('Consulta fallida: ' . mysql_error());
+            mysql_query("INSERT INTO COMENTARIO values(null, '$usuario', '$comment','$fecha',$cod);", $conexion) or die('Consulta fallida: ' . mysql_error());
             //echo '<br><br><center>Gracias por comentar!</center>';
             unset($_POST['comentario']);
             unset($_POST['nombre']);
