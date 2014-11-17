@@ -105,7 +105,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="about-p">
                                 
                                 <div class="read_more">
-                                    <a class="btn" href="top.php">Ver sitios</a>
+                                    <a class="btn" href="mapa.php?cat="'.$categoria['id_categoria'].'>Ver sitios</a>
                                 </div>
                             </div>
                     </div>
