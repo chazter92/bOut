@@ -62,13 +62,13 @@ $(document).ready(function() {
         var estrella = this;
 
         // obtenemos la película a la que pertenece la estrella
-        var metrica = $(this).parent();
+        var metrica = $(this).attr('id');
         
         // creamos el objeto para enviar a la página PHP
         var datosClick = {
             clickEstrella : $(estrella).attr('class'),
-            metrica_id : $(estrella).parent().attr('id'),
-            lugar_id : $(estrella).parent().attr('value')
+            metrica_id : $(estrella).attr('id'),
+            lugar_id : $(estrella).attr('value')
         };
 
         // cargamos datos del servidor utilizando un pedido HTTP POST
