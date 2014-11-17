@@ -22,7 +22,7 @@
         $cod = $_GET['id'];
         //$cod = 2;
 
-        $query = mysql_query("Select 'METRICA'.'nombre', 'CAT_MET'.'METRICA_id_metrica' from 'CAT_MET', 'METRICA' where 'CAT_MET'.'METRICA_id_metrica' = 'METRICA'.'id_metrica' and 'CAT_MET'.'CATEGORIA_id_categoria' = ( select 'LUGAR'.'CATEGORIA_id_categoria' from 'LUGAR' where 'LUGAR'.'id_lugar' ='$cod' );", $conexion) or die('Select fallido: ' . mysql_error());
+        $query = mysql_query("Select nombre, METRICA_id_metrica from 'CAT_MET', 'METRICA' where METRICA_id_metrica = id_metrica and CATEGORIA_id_categoria = ( select CATEGORIA_id_categoria from 'LUGAR' where id_lugar ='$cod' );", $conexion) or die('Select fallido: ' . mysql_error());
         
         //insertar comentario
         if (isset($_POST['comentario'])) {

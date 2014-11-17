@@ -33,7 +33,7 @@
         public function obtenerRating() {
             
             // Verificamos que no exista otro salon con el mismo nombre //                
-            $resultado = mysql_query("select count('CALIFICACION'.'punteo'), sum('CALIFICACION'.'punteo'), avg('CALIFICACION'.'punteo') from 'CALIFICACION' where 'CALIFICACION'.'LUGAR_id_lugar' = '$this->lugar_id' and 'CALIFICACION'.'METRICA_id_metrica' = '$this->metrica_id';", $this->conexion) or die('Select fallido: ' . mysql_error());
+            $resultado = mysql_query("select count(punteo), sum(punteo), avg(punteo) from 'CALIFICACION' where LUGAR_id_lugar = '$this->lugar_id' and METRICA_id_metrica = '$this->metrica_id';", $this->conexion) or die('Select fallido: ' . mysql_error());
             $numFilas = mysql_num_rows($resultado);
         if ($numFilas > 0) {
             $fila = mysql_fetch_assoc($resultado);
