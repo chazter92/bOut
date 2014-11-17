@@ -15,16 +15,29 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!--  jquery plguin -->
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
-<script>
+
+
+<script type="text/javascript">
 
 function initialize()
 {
+
+
+
 var mapProp = {
-  center:new google.maps.LatLng(51.508742,-0.120850),
-  zoom:5,
+  center:new google.maps.LatLng(16,-90.5),
+  zoom:7,
   mapTypeId:google.maps.MapTypeId.ROADMAP
   };
 var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+
+
+<?php include_once('marcadores.php');?>
+
+
+
+
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
@@ -59,12 +72,11 @@ google.maps.event.addDomListener(window, 'load', initialize);
                   
                     <th align="center" width="50%">
                       <?php include_once('form_mapa.php');?>
-                        
                     </th>
                   
         
         
-                    <th width="50%"><div id="googleMap" style="width:600px;height:500px;"></div></th>
+                    <th width="50%"><div id="googleMap" style="width:900px;height:500px;"></div></th>
                   </tr>
                   
                   
