@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>B-Out! | About</title>
+        <title>B-Out! | Top5</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
@@ -159,33 +159,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             require_once 'conexion.php';
                             $conexion = conectar();
                             $categoria = $_POST['cd-dropdown'];
-							$consulta = "SELECT L.nombre as Lugar, K.nombre as Categoria, "
-                                    . "(SELECT AVG(punteo) FROM `CALIFICACION` WHERE C.LUGAR_id_lugar=L.id_lugar) as Promedio "
-                                    . "FROM `LUGAR` L JOIN `CATEGORIA` K ON (L.CATEGORIA_id_categoria = K.id_categoria) JOIN `CALIFICACION` C "
-                                    . "ON (L.id_lugar = C.LUGAR_id_lugar) WHERE K.id_categoria = " . $categoria
-									. " ORDER BY Promedio DESC";
-
+							$consulta = "SELECT DISTINCT L.nombre, Ca.nombre, AVG(C.punteo) promedio, L.id_lugar "
+										. "FROM CALIFICACION C, LUGAR L, CATEGORIA Ca "
+										. "WHERE Ca.id_categoria = L.CATEGORIA_id_categoria "
+										. "AND L.id_lugar = C.LUGAR_id_lugar AND Ca.id_categoria = " . $categoria 
+										. " GROUP BY (C.LUGAR_id_lugar) ORDER BY promedio DESC LIMIT 5" ;
+										
                             $categorias = mysql_query($consulta) or
                                     die("Problemas en el select:" . mysql_error());
 
                             $contador = 1;
-
-                            while ($row = mysql_fetch_array($categorias)) {
-                                switch ($contador) {
+							while ($row = mysql_fetch_array($categorias)) {
+								$promedio = substr($row[2], 0, 3);
+								$id_lugar = $row[3];
+                                switch ($contador) {								
                                     case 1:
-                                        echo "<a style=width:100% class=box-yellow>1.		" . $row[0] . " con " . $row[2] . "</a>";
+                                        echo "<a style=width:100% class=box-yellow href='mapa.php?id=" . $id_lugar . "'>1.		" . $row[0] . " -- " . $promedio . "</a><br><br><br><br>";
                                         break;
                                     case 2:
-                                        echo "<a style=width:100% class=box-green>2.		" . $row[0] . " con " . $row[2] . "</a>";
+                                        echo "<a style=width:100% class=box-green href='mapa.php?id=" . $id_lugar . "'>2.		" . $row[0] . " -- " . $promedio . "</a><br><br><br><br>";
                                         break;
                                     case 3:
-                                        echo "<a style=width:100% class=box-grey>3.		" . $row[0] . " con " . $row[2] . "</a>";
+                                        echo "<a style=width:100% class=box-grey href='mapa.php?id=" . $id_lugar . "'>3.		" . $row[0] . " -- " . $promedio . "</a><br><br><br><br>";
                                         break;
                                     case 4:
-                                        echo "<a style=width:100% class=box-blue>4.		" . $row[0] . " con " . $row[2] . "</a>";
+                                        echo "<a style=width:100% class=box-blue href='mapa.php?id=" . $id_lugar . "'>4.		" . $row[0] ." -- " . $promedio . "</a><br><br><br><br>";
                                         break;
                                     case 5:
-                                        echo "<a style=width:100% class=box-red>5.		" . $row[0] . " con " . $row[2] . "</a>";
+                                        echo "<a style=width:100% class=box-red href='mapa.php?id=" . $id_lugar . "'>5.		" . $row[0] . " -- " . $promedio . "</a><br><br><br><br>";
                                         break;
                                 }
                                 $contador = $contador + 1;
@@ -218,6 +219,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <br>
             <br>
             <br>
+            <br>  
+			<br>
             <br>
             <br>
             <br>
@@ -225,7 +228,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <br>
             <br>
             <br>
+			<br>
             <br>
+            <br>  
+			<br>
             <br>
             <br>
             <br>
@@ -233,123 +239,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <br>
             <br>
             <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-
-
         </div>
     </div>
 </div>
