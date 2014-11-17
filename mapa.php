@@ -159,7 +159,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 								 echo '<a onClick="ventanaNuevaCalificar('.$id_lugar.')" class="btn">Calificar y comentar</a>';	
 							  }
 						?>
-                        <img src="images/<?php echo strtolower($imagen);?>" width="600px" height="290px">
+                        <img src="images/<?php echo strtolower($imagen);?>" width="450px" height="290px">
                         
                         </div>
                      
