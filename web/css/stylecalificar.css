@@ -1,0 +1,89 @@
+h1 {
+    color: #333;
+    font-size: 21px;
+    line-height: 110%;
+    text-align: center;
+    font-family: Verdana,Arial,sans-serif;
+}
+
+h3 {
+    font-family: Verdana,Arial,sans-serif;
+    color: #136cb2;
+    font-size: 13px;
+}
+
+h4 {
+    color: #333;
+    font-size: 12px;
+    line-height: 110%;
+    text-align: center;
+    font-family: Verdana,Arial,sans-serif;
+}
+
+h5 {
+    font-family: Verdana,Arial,sans-serif;
+    color: #333;
+    font-size: 13px;
+}
+
+.divPelicula {
+    font: 10px verdana, sans-serif;
+    margin: 0 auto 40px auto;
+    width: 400px;
+    background-color: #f6f6f5;
+    border: #fff 1px solid;
+    clear: both;
+    overflow: auto;
+    padding: 10px;
+}
+
+.divPortada,
+.divInfo{
+    float: left;
+}
+
+.divPortada{
+    margin-right: 10px;
+}
+
+/* indicamos que en principio las estrellas estén vacías */
+.estrellasValoracion {
+    background: url("estrellaVacia.png") no-repeat;
+    float:      left;
+    height:     24px;
+    padding:    2px;
+    width:      24px;
+}
+
+.divValoracion {
+    border:     1px solid #CCC;
+    overflow:   visible;
+    padding:    10px;
+    position:   relative;
+    width:      140px;
+    height:     24px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.divValoracion:hover{
+    border:     1px solid #666;
+}
+
+/* las imágenes que se van a usar cuando se obtengan los votos */
+.estrellaValoracion {
+    background: url("estrellaLlena.png") no-repeat;
+}
+
+/* y cuando se ponga el mouse por encima */
+.estrellaVotar {
+    background: url("estrellaHover.png") no-repeat;
+}
+
+.votosTotales {
+    background: #eaeaea;
+    top: 58px;
+    left: 0;
+    padding: 5px;
+    position:   absolute;  
+} 
