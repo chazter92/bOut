@@ -22,7 +22,7 @@
         $cod = $_GET['id'];
         //$cod = 2;
 
-        $query = mysql_query("Select nombre, METRICA_id_metrica from 'CAT_MET', 'METRICA' where METRICA_id_metrica = id_metrica and CATEGORIA_id_categoria = ( select CATEGORIA_id_categoria from 'LUGAR' where id_lugar ='$cod' );", $conexion) or die('Select fallido: ' . mysql_error());
+        $query = mysql_query("Select nombre, METRICA_id_metrica from CAT_MET, METRICA where METRICA_id_metrica = id_metrica and CATEGORIA_id_categoria = ( select CATEGORIA_id_categoria from LUGAR where id_lugar =".$cod." );", $conexion) or die('Select fallido: ' . mysql_error());
         
         //insertar comentario
         if (isset($_POST['comentario'])) {
@@ -108,11 +108,11 @@
             <tr><td><h4>Tus comentarios nos interesan!</h4></td></tr>
             <tr>
                 <td>
-                    <textarea name="comentario" cols="40" rows="5" required="" ></textarea>
+                    <textarea name="comentario" cols="40" rows="5" required ></textarea>
                 </td>
             </tr>
             <tr>
-                <td>Nombre:    <input type="text" name="nombre" required=""></td>
+                <td>Nombre:    <input type="text" name="nombre" required></td>
             </tr>
             <tr><td height = "10"></td></tr>
             <tr>

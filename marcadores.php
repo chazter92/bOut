@@ -14,9 +14,14 @@ echo "var point".$row[0]." = new google.maps.LatLng(".$row[2].", ".$row[3].");\n
 echo "var myMarker".$row[0]." = new google.maps.Marker({";
 echo "position: point".$row[0].",";
 echo "map: map,";
+echo "url:'categoria.php?id=".$row['CATEGORIA_id_categoria']."',";
 echo "title:\"".$row[1]."\"});\n";
 
+
 }
+echo "google.maps.event.addListener(myMarker, 'click', function() {
+        window.location.href = this.url;
+  });\n";
 
 ?>
 
