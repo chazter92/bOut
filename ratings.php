@@ -33,7 +33,7 @@
         public function obtenerRating() {
             
             // Verificamos que no exista otro salon con el mismo nombre //                
-            $resultado = mysql_query("select count(punteo), sum(punteo), avg(punteo) from 'CALIFICACION' where LUGAR_id_lugar = '$this->lugar_id' and METRICA_id_metrica = '$this->metrica_id';", $this->conexion) or die('Select fallido: ' . mysql_error());
+            $resultado = mysql_query("select count(punteo), sum(punteo), avg(punteo) from CALIFICACION where LUGAR_id_lugar = '".$this->lugar_id."' and METRICA_id_metrica = ".$this->metrica_id.";", $this->conexion) or die('Select fallido: ' . mysql_error());
             $numFilas = mysql_num_rows($resultado);
         if ($numFilas > 0) {
             $fila = mysql_fetch_assoc($resultado);
@@ -78,7 +78,7 @@
             $ID = $this->metrica_id;
             $Sitio = $this->lugar_id;
             
-            mysql_query("INSERT INTO 'CALIFICACION' values(null, $votar, $Sitio,$ID);", $this->conexion) or die('Consulta fallida: ' . mysql_error());
+            mysql_query("INSERT INTO CALIFICACION(punteo, LUGAR_id_lugar, METRICA_id_metrica) values(".$votar.", ".$Sitio,$ID.", ".$ID.");", $this->conexion) or die('Consulta fallida: ' . mysql_error());
             // obtenemos el nuevo rating para enviárselo a la página
             $this->obtenerRating();
         }
