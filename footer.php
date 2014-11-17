@@ -4,14 +4,11 @@ echo '<div class="footer_bg">
 	<div class="footer">
 		<div class="span_of_4">
 			<div class="span1_of_4">
-				<h4>about us</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry .....</p>
-				<span>Address</span>
-				<p class="top">500 Lorem Ipsum Dolor Sit,</p>
-				<p>22-56-2-9 Sit Amet,</p>
-				<p>USA</p>
-				<p>Phone:(00) 222 666 444</p>
-				<p>Fax: (000) 000 00 00 0</p>
+				<h4>Información</h4>
+				<p>Universidad de San Carlos de Guatemala</p>
+				<p>Facultad de Ingeniería</p>
+				<p>Escuela de ciencias y sistemas</p>
+				<p>Arquitectura de computadores y ensambladores 2</p>
 				<div class="f_icons">
 						<ul>
 							<li><a class="icon2" href="#"></a></li>
@@ -22,22 +19,26 @@ echo '<div class="footer_bg">
 				</div>
 			</div>
 			<div class="span1_of_4">
-				<h4>latest posts</h4>
-				<span>Fusce scelerisque massa vitae</span>
-				<p>25 april 2013</p>
-				<span>Pellentesque bibendum ante</span>
-				<p>15 march 2013</p>
-				<span>Maecenas quis ipsum sed magna </span>
-				<p>25 april 2013</p>
+				<h4>Integrantes</h4>
+				<span>Rita Mariela Guarán Baeza</span>
+				<p>201114613</p>
+				<span>Mario Leonel Rodas López</span>
+				<p>201114264</p>
+				<span>Ckevyn Omar Ovalle Sequén </span>
+				<p>201113945</p>
+				<span>Marvin Rafael Urias Coc</span>
+				<p>201114517</p>
+				<span>Cristian Alejandro Mucun Guzmán</span>
+				<p>201114494</p>
 			</div>
 			<div class="span1_of_4">
-				<h4>latest comments</h4>
+				<h4>Últimos comentarios</h4>
 				<span class="bg">It is a long established fact that a reader will looking layout.</span>
 				<span class="bg top">There are many variations of passages of Lorem Ipsum available words.</span>
 				<span class="bg">It is a long established fact that a reader will looking layout.</span>
 			</div>
 			<div class="span1_of_4">
-				<h4>flicker photostream</h4>
+				<h4>Photostream</h4>
 				<ul class="f_nav">
 					<li><a href="#"><img src="images/f_pic1.jpg" alt=""> </a></li>
 					<li><a href="#"><img src="images/f_pic2.jpg" alt=""> </a></li>
@@ -60,10 +61,9 @@ echo '<div class="footer_bg">
 				<ul>
 					<li><a href="index.php">home</a></li>
 					<li><a href="categoria.php">Categorias</a></li>
-					<li><a href="portfolio.php">portfolio</a></li>
-					<li><a href="blog.php">blog</a></li>
-					<li><a href="index.php">features</a></li>
-					<li><a href="contact.php">Contact</a></li>
+					<li><a href="top.php">TOP 5</a></li>
+					<li><a href="mapa.php">Mapa</a></li>
+					<li><a href="contact.php">Contacto</a></li>
 				</ul>
 			</div>
 			<div class="copy">
