@@ -103,7 +103,7 @@
             <tr><td height = "30"></td></tr>
         </table>
         
-        <form method="post" action="index.php">
+        <form method="post" action="calificar.php">
         <table>
             <tr><td><h4>Tus comentarios nos interesan!</h4></td></tr>
             <tr>
